@@ -1,24 +1,22 @@
 
-SNMP simulation data
---------------------
+# SNMP Simulation Data
+
 [![PyPI](https://img.shields.io/pypi/v/snmpsim-data.svg?maxAge=2592000)](https://pypi.org/project/snmpsim-data/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/snmpsim-data.svg)](https://pypi.org/project/snmpsim-data/)
 [![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)](https://raw.githubusercontent.com/lextudio/snmpsim-data/master/LICENSE.txt)
 
-The `snmpsim-data` package contains simulation data for
+The `snmpsim-data-lextudio` package contains simulation data for
 [snmpsim](https://www.pysnmp.com/snmpsim) - free and open-source SNMP agent simulator.
 
 The package is distributed under 2-clause
 [BSD license](https://www.pysnmp.com/snmpsim/license.html).
 
-Download
---------
+## Download
 
 SNMP simulation data can be downloaded as a Python package from
 [PyPI](https://pypi.org/project/snmpsim-data/).
 
-Installation
-------------
+## Installation
 
 Just run:
 
@@ -26,13 +24,12 @@ Just run:
 $ pyenv local 3.12
 $ pip install pipenv
 $ pipenv install snmpsim-data-lextudio
-$ pipenv run python -m snmpsim-data.setup snmpsim-data/data
+$ pipenv run setup-snmpsim-data snmpsim-data/data
 ```
 
 > This also install `snmpsim-lextudio` package as a dependency.
 
-How to use simulation data
---------------------------
+## How to use simulation data
 
 Invoke `snmpsimd` and point it to a directory with simulation data:
 
@@ -56,20 +53,17 @@ $ cat public.snmprec
 Simulator maps query parameters like SNMP community names, SNMPv3 contexts or
 IP addresses onto data files paths relative to the `data` directory.
 
-Documentation
--------------
+## Documentation
 
 Detailed information on SNMP simulator usage could be found at
 [snmpsim site](https://www.pysnmp.com/snmpsim/).
 
-Getting help
-------------
+## Getting help
 
 If you run into bad simulation data, feel free to
 [open an issue](https://github.com/lextudio/pysnmp/issues) on GitHub.
 
-Contributions
--------------
+## Contributions
 
 If you have an SNMP-managed device, consider snmpwalk'ing it (or use `snmprec` tool
 from `snmpsim` package) and submit a PR offering your data.

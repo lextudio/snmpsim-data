@@ -14,7 +14,7 @@ def setup_data(target_directory="."):
       Defaults to the current directory if not specified.
     """
     try:
-        with path('snmpsim-data', 'data') as source_directory:
+        with path('snmpsim_data', 'data') as source_directory:
             if not os.path.exists(source_directory):
                 print(f"Error: The source data directory '{source_directory}' does not exist.")
                 return
@@ -28,7 +28,7 @@ def setup_data(target_directory="."):
                 except Exception as e:
                     print(f"Error copying {source_file} to {target_file}: {e}")
     except ImportError as exc:
-        print("Error: Could not locate the 'snmpsim-data' package. Is it installed?")
+        print("Error: Could not locate the 'snmpsim-data-lextudio' package. Is it installed?")
         return
 
 def main():

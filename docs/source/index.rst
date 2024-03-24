@@ -5,7 +5,7 @@ SNMP simulation data
 .. toctree::
    :maxdepth: 2
 
-Free and open-source `SNMP agent simulator <http://snmplabs.com/snmpsim>`_ pretends to be one
+Free and open-source `SNMP agent simulator <https://www.pysnmp.com/snmpsim>`_ pretends to be one
 or many SNMP agents. To be a reasonably convincing SNMP agent, simulator needs to serve SNMP
 managed objects that resemble the ones served by real-world SNMP-enabled devices.
 
@@ -17,7 +17,7 @@ On-line simulation
 ------------------
 
 All the packaged snapshots are served by
-`public SNMP simulator instance <http://demo.snmplabs.com>`_ under SNMP community and
+`public SNMP simulator instance <http://demo.pysnmp.com>`_ under SNMP community and
 Context Name identifiers noted in the documentation below.
 
 For example, to read SNMP managed object of the Ubiquiti M5 Wi-Fi bridge:
