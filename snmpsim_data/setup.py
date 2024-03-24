@@ -19,14 +19,17 @@ def setup_data(target_directory="."):
                 print(f"Error: The source data directory '{source_directory}' does not exist.")
                 return
 
-            for filename in os.listdir(source_directory):
-                source_file = os.path.join(source_directory, filename)
-                target_file = os.path.join(target_directory, filename)
-                try:
-                    shutil.copy(source_file, target_file)
-                    print(f"Copied {source_file} to {target_file}")
-                except Exception as e:
-                    print(f"Error copying {source_file} to {target_file}: {e}")
+            for root, dirs, files in os.walk(source_directory):
+                for filename in files:
+                    source_file = os.path.join(root, filename)
+                    relative_path = os.path.relpath(source_file, source_directory)
+                    target_file = os.path.join(target_directory, relative_path)
+                    try:
+                        os.makedirs(os.path.dirname(target_file), exist_ok=True)
+                        shutil.copy(source_file, target_file)
+                        print(f"Copied {source_file} to {target_file}")
+                    except Exception as e:
+                        print(f"Error copying {source_file} to {target_file}: {e}")
     except ImportError as exc:
         print("Error: Could not locate the 'snmpsim-data-lextudio' package. Is it installed?")
         return
