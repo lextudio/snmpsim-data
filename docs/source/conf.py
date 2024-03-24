@@ -17,6 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
+import os
+
+
 project = 'SNMP Simulation Data'
 copyright = '2019, Ilya Etingof. © Copyright 2024, LeXtudio Inc.'
 author = 'LeXtudio Inc. <support@lextudio.com>'
