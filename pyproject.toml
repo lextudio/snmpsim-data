@@ -19,14 +19,11 @@ classifiers = [
 ]
 readme = "README.md"
 
-packages = [{ include = "snmpsim_data" }]
-
-include = [
-    { path = "data", format = ["sdist", "wheel"]},
-    "docs",
-    "README.md",
-    "LICENSE.txt"
+packages = [
+    { include = "snmpsim_data" }
 ]
+
+include = [ "docs" ]
 
 [tool.poetry.dependencies]
 python = "^3.7"
