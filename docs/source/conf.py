@@ -17,13 +17,16 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'SNMP simulation data'
-copyright = '2019, Ilya Etingof'
-author = 'Ilya Etingof'
+project = 'SNMP Simulation Data'
+copyright = '2019, Ilya Etingof. © Copyright 2024, LeXtudio Inc.'
+author = 'LeXtudio Inc. <support@lextudio.com>'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0'
+version = '1.0'
+release = "1.0.0"
 
+
+language = 'en'
 
 # -- General configuration ---------------------------------------------------
 
@@ -31,51 +34,64 @@ release = '0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.viewcode',
+    'sphinx_sitemap',
+    'sphinx_copybutton',
 ]
 
+html_baseurl = 'https://docs.lextudio.com/snmpsim-data/'
+sitemap_url_scheme = '{link}'
+
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['.templates']
+templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+pygments_style = 'sphinx'
+pygments_dark_style = "monokai"
 
 # -- Options for HTML output -------------------------------------------------
+
+html_theme = 'furo'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 html_theme_options = {
-    'logo': 'logo.svg',
-    'description': '<p align=left><i><b>Brewing free software for the greater good</i></b></p>',
-    'show_powered_by': False,
-    'github_user': 'etingof',
-    'github_repo': 'snmpsim-data',
-    'fixed_sidebar': True,
+    "source_repository": "https://github.com/lextudio/snmpsim-data",
+    "source_branch": "main",
+    "source_directory": "docs/source/",
+    "footer_icons": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/lextudio/snmpsim-data",
+            "html": "",
+            "class": "fa-brands fa-solid fa-github fa-2x",
+        },
+    ],
 }
 
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',
-        'searchbox.html',
-        'donate.html',
-    ]
-}
+html_css_files = [
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css",
+]
+
+html_title = "SNMP Simulator Data Documentation"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = '.static/favicon.ico'
+html_favicon = '_static/favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['.static']
+html_static_path = ['_static']
 
 # If true, links to the reST sources are added to the pages.
 html_show_sourcelink = False
@@ -83,3 +99,11 @@ html_show_sourcelink = False
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
 
+def setup(app):
+    on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+    if not on_rtd:
+        """Insert Google Analytics tracker
+        Based on this Stackoverflow suggestion: https://stackoverflow.com/a/41885884
+        """
+        app.add_js_file("https://www.googletagmanager.com/gtag/js?id=G-DFLYZZK12P")
+        app.add_js_file("google_analytics_tracker.js")
