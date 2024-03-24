@@ -26,7 +26,7 @@ For example, to read SNMP managed object of the Ubiquiti M5 Wi-Fi bridge:
 
 .. code-block:: bash
 
-   $ snmpget -v2c -c network/wifi/ubiquiti-m5 sysDescr.0 demo.pysnmp.com
+   $ snmpget -v2c -c network/wifi/ubiquiti-m5 demo.pysnmp.com sysDescr.0
 
 Local Simulation
 ----------------
