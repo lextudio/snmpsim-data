@@ -3,13 +3,13 @@ SNMP simulation data
 --------------------
 [![PyPI](https://img.shields.io/pypi/v/snmpsim-data.svg?maxAge=2592000)](https://pypi.org/project/snmpsim-data/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/snmpsim-data.svg)](https://pypi.org/project/snmpsim-data/)
-[![Build status](https://travis-ci.org/etingof/snmpsim-data.svg?branch=master)](https://travis-ci.org/etingof/snmpsim-data)
-[![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)](https://raw.githubusercontent.com/etingof/snmpsim-data/master/LICENSE.txt)
+[![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)](https://raw.githubusercontent.com/lextudio/snmpsim-data/master/LICENSE.txt)
 
 The `snmpsim-data` package contains simulation data for
-[snmpsim](http://snmplabs.com/snmpsim) - free and open-source SNMP agent simulator.
+[snmpsim](https://www.pysnmp.com/snmpsim) - free and open-source SNMP agent simulator.
+
 The package is distributed under 2-clause
-[BSD license](http://snmplabs.com/snmpsim/license.html).
+[BSD license](https://www.pysnmp.com/snmpsim/license.html).
 
 Download
 --------
@@ -23,22 +23,27 @@ Installation
 Just run:
 
 ```bash
-$ pip install snmpsim-data
+$ pyenv local 3.12
+$ pip install pipenv
+$ pipenv install snmpsim-data-lextudio
+$ pipenv run python -m snmpsim-data.setup snmpsim-data/data
 ```
+
+> This also install `snmpsim-lextudio` package as a dependency.
 
 How to use simulation data
 --------------------------
 
-Invoke `snmpsimd.py` and point it to a directory with simulation data:
+Invoke `snmpsimd` and point it to a directory with simulation data:
 
-```
-$ snmpsimd.py --data-dir=snmpsim-data/data --agent-udpv4-endpoint=127.0.0.1:1024
+``` bash
+$ pipenv run snmpsimd --data-dir=snmpsim-data/data --agent-udpv4-endpoint=127.0.0.1:1024
 ```
 
 Simulation data is stored in simple plain-text files having `OID|TYPE|VALUE`
 format:
 
-```
+``` bash
 $ cat public.snmprec
 1.3.6.1.2.1.1.1.0|4|Linux 2.6.25.5-smp SMP Tue Jun 19 14:58:11 CDT 2007 i686
 1.3.6.1.2.1.1.2.0|6|1.3.6.1.4.1.8072.3.2.10
@@ -55,13 +60,13 @@ Documentation
 -------------
 
 Detailed information on SNMP simulator usage could be found at
-[snmpsim site](http://snmplabs.com/snmpsim/).
+[snmpsim site](https://www.pysnmp.com/snmpsim/).
 
 Getting help
 ------------
 
 If you run into bad simulation data, feel free to
-[open an issue](https://github.com/etingof/snmpsim-data/issues) on GitHub.
+[open an issue](https://github.com/lextudio/pysnmp/issues) on GitHub.
 
 Contributions
 -------------
@@ -69,4 +74,6 @@ Contributions
 If you have an SNMP-managed device, consider snmpwalk'ing it (or use `snmprec` tool
 from `snmpsim` package) and submit a PR offering your data.
 
-Copyright (c) 2019, [Ilya Etingof](mailto:etingof@gmail.com). All rights reserved.
+Copyright (c) 2019, [Ilya Etingof](mailto:etingof@gmail.com).
+Copyright (c) 2024, [LeXtudio Inc.](mailto:support@lextudio.com).
+All rights reserved.

@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "snmpsim-data-lextudio"
+version = "0.1.2"
+description = "This package includes a collection of SNMP dumps from different real-world SNMP-managed devices and software."
+authors = ["Ilya Etingof <etingof@gmail.com>", "LeXtudio Inc. <support@lextudio.com>"]
+license = "BSD-2-Clause"
+repository = "https://github.com/lextudio/snmpsim-data"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Telecommunications Industry",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Communications",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+readme = "README.md"
+
+packages = [{ include = "snmpsim-data" }]
+
+include = ["docs/**/*", "data/**/*", "README.md", "LICENSE.txt"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+snmpsim-lextudio = "^1.0.0"
+pysmi-lextudio = "^1.3.0"
+
+[tool.poetry_bumpversion.file."snmpsim-data/__init__.py"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+setup-snmpsim-data = "snmpsim-data.setup:main"
