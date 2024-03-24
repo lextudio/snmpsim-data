@@ -34,8 +34,10 @@ $ pipenv run setup-snmpsim-data snmpsim-data/data
 Invoke `snmpsimd` and point it to a directory with simulation data:
 
 ``` bash
-$ pipenv run snmpsimd --data-dir=snmpsim-data/data --agent-udpv4-endpoint=127.0.0.1:1024
+$ pipenv run snmpsim-command-responder --data-dir=snmpsim-data/data/UPS --agent-udpv4-endpoint=127.0.0.1:1024
 ```
+
+> This allows the simulator to emulate UPS devices.
 
 Simulation data is stored in simple plain-text files having `OID|TYPE|VALUE`
 format:
