@@ -1,3 +1,4 @@
+.. include:: /includes/_links.rst
 
 SNMP Simulation Data
 ====================
@@ -5,22 +6,29 @@ SNMP Simulation Data
 .. toctree::
    :maxdepth: 2
 
-Free and open-source `SNMP agent simulator <https://www.pysnmp.com/snmpsim>`_
-pretends to be one or many SNMP agents. To be a reasonably convincing SNMP
-agent, simulator needs to serve SNMP managed objects that resemble the ones
+Free and open-source `SNMP simulator <https://www.pysnmp.com/snmpsim>`_ can
+pretend to be one or many SNMP agents. But to be a reasonably convincing SNMP
+agent, the simulator needs to serve SNMP managed objects that resemble the ones
 served by real-world SNMP-enabled devices.
 
-This is a collection of snapshots taken from various hardware devices and
-operating systems.
+This package offers a collection of snapshots taken from various real hardware
+devices and operating systems.
 
 The data snapshots are distributed under 2-clause :doc:`BSD license </license>`.
 
-On-line Simulation
-------------------
+Online Simulation
+-----------------
 
-All the packaged snapshots are served by
+.. note::
+
+   Due to technical issues, the online simulation is currently running a
+   different SNMP agent simulator, and the data served are different as well.
+
+   We are working on bringing the online simulation back to the original.
+
+All the packaged snapshots are also served by
 `public SNMP simulator instance <http://demo.pysnmp.com>`_ under SNMP community
-and Context Name identifiers noted in the documentation below.
+and context name identifiers noted in the documentation below.
 
 For example, to read SNMP managed object of the Ubiquiti M5 Wi-Fi bridge:
 
@@ -42,9 +50,9 @@ Consider donating some snapshots of SNMP data (e.g. ``snmpwalk``) as reported
 by any real-world hardware to this SNMP simulator data project. Having the
 real-world SNMP probes would benefit many SNMP implementers and testers.
 
-Technically, it can be a PR against ``snmpsim-data`` package adding your
-``.snmpwalk`` or ``.snmprec`` files to the data directory. Or a URL to
-download. Or any other way.
+Please create pull requests here against ``snmpsim-data`` package, and add your
+``.snmpwalk`` or ``.snmprec`` files to the data directory. Alternatively, you
+might give us a URL to download, or any other way.
 
 .. warning::
 
@@ -53,12 +61,18 @@ download. Or any other way.
 
 With your permission, we would then publish these ``.snmpwalk`` online.
 
-Simulation data inventory
--------------------------
+Contact
+-------
+
+In case of questions or troubles using PySNMP, please open up a
+new `GitHub issue`_ or ask on `Stack Overflow`_.
+
+For other inquiries, please contact `LeXtudio Inc.`_.
+
+More information about support options can be found in the following
+section.
 
 .. toctree::
-   :maxdepth: 2
-   :glob:
+   :maxdepth: 1
 
-   /data/*
-
+   Support Options <https://www.pysnmp.com/support>
