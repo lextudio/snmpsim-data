@@ -6,6 +6,8 @@ SNMP Simulation Data
 .. toctree::
    :maxdepth: 2
 
+   Return to PySNMP Homepage <https://pysnmp.com>
+
 Free and open-source `SNMP simulator <https://www.pysnmp.com/snmpsim>`_ can
 pretend to be one or many SNMP agents. But to be a reasonably convincing SNMP
 agent, the simulator needs to serve SNMP managed objects that resemble the ones
