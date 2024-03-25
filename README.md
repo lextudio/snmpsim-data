@@ -24,21 +24,23 @@ Just run:
 $ pyenv local 3.12
 $ pip install pipenv
 $ pipenv install snmpsim-data-lextudio
-$ pipenv run setup-snmpsim-data snmpsim-data/data
+$ pipenv run setup-snmpsim-data ./data
 ```
 
-> This also install `snmpsim-lextudio` package as a dependency.
+This installs `snmpsim-lextudio` package as a dependency, and copy simulation
+data into the `data` directory.
 
-## How to use simulation data
+## How to Use Simulation Data
 
-Invoke `snmpsimd` and point it to a directory with simulation data:
+Invoke `snmpsim-command-responder` and point it to a directory with simulation data:
 
 ``` bash
-$ pipenv run snmpsim-command-responder --data-dir=snmpsim-data/data/UPS --agent-udpv4-endpoint=127.0.0.1:1024
+$ pipenv run snmpsim-command-responder --data-dir=data/UPS --agent-udpv4-endpoint=127.0.0.1:1024
 ```
 
-> This allows the simulator to emulate UPS devices.
+> This allows the simulator to read the specific files and emulate UPS devices.
 
+## Simulation Data Format
 Simulation data is stored in simple plain-text files having `OID|TYPE|VALUE`
 format:
 
