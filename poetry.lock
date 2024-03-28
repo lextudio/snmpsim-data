@@ -528,13 +528,13 @@ windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "pysmi-lextudio"
-version = "1.4.1"
+version = "1.4.2"
 description = "A pure-Python implementation of SNMP/SMI MIB parsing and conversion library."
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = "<4.0,>=3.7"
 files = [
-    {file = "pysmi_lextudio-1.4.1-py3-none-any.whl", hash = "sha256:d985825ca40951d0b52d2196060331647af396f28a87f37ed53705488973191c"},
-    {file = "pysmi_lextudio-1.4.1.tar.gz", hash = "sha256:e131ada78a2f7f661ca1b23f186021c7a2a8a3b40d99c7229a113899689d4254"},
+    {file = "pysmi_lextudio-1.4.2-py3-none-any.whl", hash = "sha256:c8413ef7aed6240d7ec1b2f01c8a7ba5fd6c76a68cbd9a0b7f01d9d6edfe10d8"},
+    {file = "pysmi_lextudio-1.4.2.tar.gz", hash = "sha256:e6c9521a8de4f7f0911fdb34b78c6d9b8ee4ca28063fc84f6af857df0d039cef"},
 ]
 
 [package.dependencies]
@@ -712,18 +712,21 @@ code-style = ["pre-commit (==2.12.1)"]
 rtd = ["ipython", "myst-nb", "sphinx", "sphinx-book-theme", "sphinx-examples"]
 
 [[package]]
-name = "sphinx-sitemap"
-version = "2.5.1"
+name = "sphinx-sitemap-lextudio"
+version = "2.5.2"
 description = "Sitemap generator for Sphinx"
 optional = false
 python-versions = "*"
 files = [
-    {file = "sphinx-sitemap-2.5.1.tar.gz", hash = "sha256:984bef068bbdbc26cfae209a8b61392e9681abc9191b477cd30da406e3a60ee5"},
-    {file = "sphinx_sitemap-2.5.1-py3-none-any.whl", hash = "sha256:0b7bce2835f287687f75584d7695e4eb8efaec028e5e7b36e9f791de3c344686"},
+    {file = "sphinx-sitemap-lextudio-2.5.2.tar.gz", hash = "sha256:e4cc4e79efc41a0bb548442562fb419465b156b296ec99d16c48f54862b499e1"},
+    {file = "sphinx_sitemap_lextudio-2.5.2-py3-none-any.whl", hash = "sha256:686f3c542812169330ca5c336557820047cb17cc8d7ad9838d9329d73648cfad"},
 ]
 
 [package.dependencies]
 sphinx = ">=1.2"
+
+[package.extras]
+dev = ["build", "flake8", "pre-commit", "pytest", "sphinx", "tox"]
 
 [[package]]
 name = "sphinxcontrib-applehelp"
@@ -860,4 +863,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "31e6d3949aa971952ee9ac8c74bf84422606c1c6a05316569baaddc91f8502c8"
+content-hash = "4903b2c29aefc0cbb583883178a250ec10849e1bd96adb1ff3ba806a3001cff7"
