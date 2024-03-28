@@ -64,8 +64,44 @@ data:
 .. code-block:: bash
 
    $ pipenv run snmpsim-command-responder --data-dir=data/UPS --agent-udpv4-endpoint=127.0.0.1:1024
+   Using "NullReporter" activity reporting method with params  
+   Scanning "/Users/lextm/.snmpsim/variation" directory for variation modules... 
+   Directory "/Users/lextm/.snmpsim/variation" does not exist 
+   Scanning "/usr/local/share/snmpsim/variation" directory for variation modules... 
+   Directory "/usr/local/share/snmpsim/variation" does not exist 
+   ...
+   --- SNMP Engine configuration 
+   SNMPv3 EngineID: 0x80004fb8054d6163426f6f6b2d50726f2e6c6f636181182200 
+   --- Simulation data recordings configuration 
+   SNMPv3 Context Engine ID: 0x80004fb8054d6163426f6f6b2d50726f2e6c6f636181182200 
+   Scanning "data/UPS" directory for  *.dump, *.MVC, *.sapwalk, *.snmpwalk, *.snmprec, *.snmprec.bz2 data files... 
+    ...
+    SNMPv1/2c community name: huawei-gse200m 
+    SNMPv3 Context Name: fc2f7455eda7c40ed64d477cd0841be9 or huawei-gse200m 
+    Configuring data/UPS/apc-8932.snmprec controller 
+    SNMPv1/2c community name: apc-8932 
+    SNMPv3 Context Name: f748dc2efe5004933c1edd2463556ef3 or apc-8932 
+   --- SNMPv3 USM configuration 
+   SNMPv3 USM SecurityName: simulator 
+   SNMPv3 USM authentication key: auctoritas, authentication protocol: MD5 
+   SNMPv3 USM encryption (privacy) key: privatus, encryption protocol: DES 
+   Maximum number of variable bindings in SNMP response: 64 
+   --- Transport configuration 
+   Listening at UDP/IPv4 endpoint 127.0.0.1:1024, transport ID 1.3.6.1.6.1.1.0 
 
-This allows the simulator to read the specific files and emulate UPS devices.
+You can see from the console output that the simulator reads the data files and
+starts to emulate UPS devices. And to test out you need one of the commands like
+
+.. code-block:: bash
+
+   $ snmpget -v2c -c apc-8932 localhost:1024 sysDescr.0
+   SNMPv2-MIB::sysDescr.0 = STRING: APC Web/SNMP Management Card (MB:v4.1.0 PF:v6.7.2 PN:apc_hw05_aos_672.bin AF1:v6.7.2 AN1:apc_hw05_rpdu2g_672.bin MN:AP8932 HR:02 SN: 3F503A169043 MD:01/23/2019)
+
+.. note::
+
+   ``apc-8932`` is the v1/2c community name for the emulated UPS device, and the
+   original data file is ``data/UPS/apc-8932.snmprec``. Such information can be
+   found in ``snmpsim-command-responder`` console output.
 
 Snapshots Contribution
 ----------------------
