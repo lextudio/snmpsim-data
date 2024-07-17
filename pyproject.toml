@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "snmpsim-data"
-version = "1.0.0"
+version = "1.0.1"
 description = "This package includes a collection of SNMP dumps from different real-world SNMP-managed devices and software."
 authors = ["Ilya Etingof <etingof@gmail.com>", "LeXtudio Inc. <support@lextudio.com>"]
 license = "BSD-2-Clause"

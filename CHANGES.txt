@@ -1,11 +1,15 @@
 
-Revision 1.0.0, released 03-24-2024
------------------------------------
+Revision 1.0.1, released on Jul 16, 2024
+----------------------------------------
+
+- Removed package postfix.
+
+Revision 1.0.0, released on Mar 24, 2024
+----------------------------------------
 
 - Revised the installation experience.
 
-Revision 0.0.0, released 02-05-2019
------------------------------------
+Revision 0.0.0, released on Feb 5, 2024
+---------------------------------------
 
 - Initial revision
-
