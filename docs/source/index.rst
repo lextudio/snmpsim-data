@@ -45,17 +45,17 @@ If you prefer to have local simulation, follow `SNMP simulator documentation <ht
 on how to set up simulation data. Besides other things, local installation will
 let you add data variation calls into the otherwise static snapshots.
 
-An example of local simulation setup is to use ``snmpsim-data-lextudio`` package
+An example of local simulation setup is to use ``snmpsim-data`` package
 as below:
 
 .. code-block:: bash
 
    $ pyenv local 3.12
    $ pip install pipenv
-   $ pipenv install snmpsim-data-lextudio
+   $ pipenv install snmpsim-data
    $ pipenv run setup-snmpsim-data ./data
 
-This installs ``snmpsim-lextudio`` package as a dependency, and copy simulation
+This installs ``snmpsim`` package as a dependency, and copy simulation
 data into the ``data`` directory.
 
 Invoke ``snmpsim-command-responder`` and point it to a directory with simulation

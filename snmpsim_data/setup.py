@@ -31,7 +31,7 @@ def setup_data(target_directory="."):
                     except Exception as e:
                         print(f"Error copying {source_file} to {target_file}: {e}")
     except ImportError as exc:
-        print("Error: Could not locate the 'snmpsim-data-lextudio' package. Is it installed?")
+        print("Error: Could not locate the 'snmpsim-data' package. Is it installed?")
         return
 
 def main():

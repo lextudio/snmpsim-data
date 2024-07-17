@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "snmpsim-data-lextudio"
+name = "snmpsim-data"
 version = "1.0.0"
 description = "This package includes a collection of SNMP dumps from different real-world SNMP-managed devices and software."
 authors = ["Ilya Etingof <etingof@gmail.com>", "LeXtudio Inc. <support@lextudio.com>"]
@@ -27,8 +27,8 @@ include = [ "docs" ]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-snmpsim-lextudio = "^1.0.0"
-pysmi-lextudio = "^1.3.0"
+snmpsim = "^1.0.0"
+pysmi = "^1.3.0"
 
 [tool.poetry.group.dev.dependencies]
 Sphinx = "^5.0.0"

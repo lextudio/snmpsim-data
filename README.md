@@ -5,7 +5,7 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/snmpsim-data.svg)](https://pypi.org/project/snmpsim-data/)
 [![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)](https://raw.githubusercontent.com/lextudio/snmpsim-data/master/LICENSE.txt)
 
-The `snmpsim-data-lextudio` package contains simulation data for
+The `snmpsim-data` package contains simulation data for
 [snmpsim](https://www.pysnmp.com/snmpsim) - free and open-source SNMP agent simulator.
 
 The package is distributed under 2-clause
@@ -23,11 +23,11 @@ Just run:
 ```bash
 $ pyenv local 3.12
 $ pip install pipenv
-$ pipenv install snmpsim-data-lextudio
+$ pipenv install snmpsim-data
 $ pipenv run setup-snmpsim-data ./data
 ```
 
-This installs `snmpsim-lextudio` package as a dependency, and copy simulation
+This installs `snmpsim` package as a dependency, and copy simulation
 data into the `data` directory.
 
 ## How to Use Simulation Data
