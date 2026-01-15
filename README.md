@@ -73,5 +73,5 @@ If you have an SNMP-managed device, consider snmpwalk'ing it (or use `snmprec` t
 from `snmpsim` package) and submit a PR offering your data.
 
 Copyright (c) 2019, [Ilya Etingof](mailto:etingof@gmail.com).
-Copyright (c) 2024, [LeXtudio Inc.](mailto:support@lextudio.com).
+Copyright (c) 2024-2026, [LeXtudio Inc.](mailto:support@lextudio.com).
 All rights reserved.

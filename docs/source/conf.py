@@ -21,7 +21,7 @@ import os
 
 
 project = 'SNMP Simulation Data'
-copyright = '2019, Ilya Etingof. © Copyright 2024, LeXtudio Inc.'
+copyright = '2019, Ilya Etingof. © Copyright 2024-2026, LeXtudio Inc.'
 author = 'LeXtudio Inc. <support@lextudio.com>'
 
 # The full version, including alpha/beta/rc tags
